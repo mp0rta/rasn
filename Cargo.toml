@@ -13,7 +13,7 @@ edition.workspace = true
 bench = false
 
 [workspace]
-members = [".", "macros", "macros/macros_impl", "standards/*"]
+members = [".", "macros", "macros/macros_impl", "rasn-py", "standards/*"]
 exclude = ["fuzzing"]
 
 [workspace.package]
@@ -34,6 +34,7 @@ f32 = []
 f64 = []
 backtraces = ["std", "snafu/backtrace"]
 compiler = ["rasn-compiler"]
+python-bindings = ["pyo3"]
 
 [profile.bench-lto]
 inherits = "bench"
@@ -106,6 +107,7 @@ snafu = { version = "0.8.5", default-features = false, features = [
 serde_json = { version = "1", default-features = false, features = ["alloc"] }
 xml-no-std = "0.8.26"
 cfg-if = "1.0.1"
+pyo3 = { version = "0.27.2", optional = true, features = ["extension-module"] }
 
 [dev-dependencies]
 asn1 = "=0.20.0"

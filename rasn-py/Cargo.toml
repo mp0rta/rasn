@@ -1,0 +1,15 @@
+[package]
+name = "rasn-py"
+version = "0.0.1"
+edition = "2021"
+publish = false
+description = "python bindings impls for rasn."
+license = "MIT OR Apache-2.0"
+
+[lib]
+name = "rasn_py"
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+pyo3 = { version = "0.27.2", features = ["extension-module"] }
+rasn = { path = ".." }
