@@ -13,9 +13,14 @@ classifiers = [
     "Programming Language :: Python :: Implementation :: CPython",
     "Programming Language :: Python :: Implementation :: PyPy",
 ]
-dependencies = []
+dependencies = [
+    "pytest>=9.0.2",
+]
 
 [dependency-groups]
 dev = [
     "maturin>=1.11.5",
 ]
+
+[tool.pytest.ini_options]
+testpaths = ["python/tests"]

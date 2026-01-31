@@ -1,0 +1,12 @@
+[package]
+name = "rasn-py-macros"
+version = "0.0.1"
+edition = "2021"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+syn = { version = "2.0.79", features = ["extra-traits"] }
+proc-macro2 = "1.0.88"
+quote = "1.0.43"
